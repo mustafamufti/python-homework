@@ -1,0 +1,16 @@
+    max_index = monthly_profit_change.index(max_increase_value) + 1
+    min_index = monthly_profit_change.index(max_decrease_value) + 1
+    
+        # Print Stat
+    max_month = total_months[max_index]
+    min_month = total_months[min_index]
+
+
+with open('output.txt','w') as op: 
+     print("Financial Analysis")
+     print("----------------------------")
+     print(f"Total Months: {total_months}")
+     print(f"Total: ${sum(total_profit)}")
+     print(f"Average Change: {round(sum(monthly_profit_change)/len(monthly_profit_change),2)}")
+     print(f"Greatest Increase in Profits: {max_month} (${max_index})\n")
+     print(f"Greatest Decrease in Profits: {min_month} (${min_index})\n")
